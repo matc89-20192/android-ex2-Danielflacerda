@@ -52,6 +52,9 @@ public class CorrecaoTest {
                 .perform(click());
 
         onView(withId(R.id.editText))
+                .perform(clearText());
+
+        onView(withId(R.id.editText))
                 .perform(typeText("Sicrano"));
 
         onView(withId(R.id.btnConfirmar))
@@ -94,6 +97,9 @@ public class CorrecaoTest {
     public void checaSeCaixaDeTextoMostraUsuarioAtual() {
         onView(withId(R.id.btnTrocar))
                 .perform(click());
+
+        onView(withId(R.id.editText))
+                .perform(clearText());
 
         onView(withId(R.id.editText))
                 .perform(typeText("Beltrano"));
